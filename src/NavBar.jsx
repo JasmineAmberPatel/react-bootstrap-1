@@ -4,10 +4,8 @@ import '../Styles/NavBar.css';
 const NavBar = () => {
   return (
     <div className="NavBar">
-      <div>
-        <img className="logo" src="../images/logo.png" />
-      </div>
       <ul className="nav">
+        <img className="logo" src="../images/logo.png" />
         <li className="item" />
         <li>View Properties</li>
         <li>Add a Property</li>
@@ -17,4 +15,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
