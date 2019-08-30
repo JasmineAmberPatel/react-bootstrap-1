@@ -13,18 +13,16 @@ ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    overflow: hidden;
+    padding: 10px;
 }
 
-li {
+Link {
     margin: 0;
-    padding-top: 30px;
-    padding-right: 20px;
     display: inline;
-    float: right;
     cursor: pointer;
-}
+    padding: 20px;
+}    
 
-li:hover {
+Link:hover {
     color:  rgb(216, 137, 199);
 }
