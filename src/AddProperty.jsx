@@ -1,4 +1,5 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
 import '../Styles/AddProperty.css';
 
 class AddProperty extends Component {
@@ -6,7 +7,7 @@ class AddProperty extends Component {
     fields: {
       title: 'Choose your lovely new abode  ',
       type: 'Flat',
-      location: 'Manchester',
+      city: 'Manchester',
       bedrooms: [],
       bathrooms: [],
       price: [],
@@ -14,9 +15,35 @@ class AddProperty extends Component {
     },
   };
 
+  componentDidMount() {
+    axios.get('http://localhost:3000/api/v1/PropertyListing').then(response => {
+      console.log(response);
+      this.setState({ fields: response.data });
+    })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
 handleAddProperty = event => {
   event.preventDefault();
   console.log(this.state.fields);
+  axios.post('/propertyListing', {
+    _id: 'string',
+    title: 'string',
+    type: 'string',
+    bedrooms: 0,
+    bathrooms: 0,
+    price: 0,
+    city: 'string',
+    email: 'string',
+  })
+    .then(response => {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 };
 
 handleFieldChange = (event) => {
@@ -32,8 +59,8 @@ render() {
   return (
     <div className="AddProperty">
       <form onSubmit={this.handleAddProperty}>
-        <label> Property Description <input name="title" value={this.state.fields.title} onChange={this.handleFieldChange} /></label>
-        <label>Type of Property
+        <label> Property Description: <input name="title" value={this.state.fields.title} onChange={this.handleFieldChange} /></label>
+        <label>Type of Property:
           <select name="type" value={this.state.fields.type} onChange={this.handleFieldChange}>
             <option value="Flat">Flat</option>
             <option value="Semi-Detached">Semi-Detached</option>
@@ -43,8 +70,8 @@ render() {
             <option value="Bungalow">Bungalow</option>
           </select>
         </label>
-        <label> Location
-          <select name="location" value={this.state.fields.location} onChange={this.handleFieldChange}>
+        <label> City:
+          <select name="city" value={this.state.fields.city} onChange={this.handleFieldChange}>
             <option value="Manchester">Manchester</option>
             <option value="Leeds">Leeds</option>
             <option value="Sheffield">Sheffield</option>

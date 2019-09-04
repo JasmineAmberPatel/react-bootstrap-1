@@ -1,28 +1,24 @@
 .NavBar {
-    background-color: white;
-    border-bottom: grey;
+  background-color: white;
 };
 
 .logo {
-    border-image: url('../images/logo.png');
-    height: 75px;
-    padding: 0px;
+  border-image: url('../images/logo.png');
+  height: 75px;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    padding: 10px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 Link {
-    margin: 0;
-    display: inline;
-    cursor: pointer;
-    padding: 20px;
+  cursor: pointer;
+  align-content: space-around;
 }    
 
-Link:hover {
-    color:  rgb(216, 137, 199);
+.item {
+  padding-right: 20px;
+  padding-left: 20px;
 }
