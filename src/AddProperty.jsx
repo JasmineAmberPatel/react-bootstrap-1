@@ -5,7 +5,7 @@ import '../Styles/AddProperty.css';
 class AddProperty extends Component {
   state = {
     fields: {
-      title: 'Choose your lovely new abode  ',
+      title: '',
       type: 'Flat',
       city: 'Manchester',
       bedrooms: [],
@@ -15,33 +15,22 @@ class AddProperty extends Component {
     },
   };
 
-  componentDidMount() {
-    axios.get('http://localhost:3000/api/v1/PropertyListing').then(response => {
-      console.log(response);
-      this.setState({ fields: response.data });
-    })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
-
 handleAddProperty = event => {
   event.preventDefault();
   console.log(this.state.fields);
-  axios.post('/propertyListing', {
-    _id: 'string',
-    title: 'string',
-    type: 'string',
-    bedrooms: 0,
-    bathrooms: 0,
-    price: 0,
-    city: 'string',
-    email: 'string',
+  axios.post('http://localhost:3000/api/v1/PropertyListing', {
+    title: this.state.fields.title,
+    type: this.state.fields.type,
+    bedrooms: this.state.fields.bedroom,
+    bathrooms: this.state.fields.bathrooms,
+    price: this.state.fields.price,
+    city: this.state.fields.city,
+    email: this.state.fields.email,
   })
     .then(response => {
       console.log(response);
     })
-    .catch(function (error) {
+    .catch(error => {
       console.log(error);
     });
 };
