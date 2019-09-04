@@ -12,8 +12,7 @@ class NavBar extends React.Component {
       <div className="NavBar">
         <ul className="nav">
           <img className="logo" src="../images/logo.png" />
-          <Link className="item" />
-          <Link to="/">View Properties</Link>
+          <Link className="item" to="/">View Properties</Link>
           <Link to="/add-property">Add a Property</Link>
         </ul>
       </div>
