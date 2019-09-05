@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar';
-import '../Styles/app.css';
+import '../../Styles/app.css';
 import { Switch, Route } from 'react-router';
 import Properties from './Properties';
 import AddProperty from './AddProperty';

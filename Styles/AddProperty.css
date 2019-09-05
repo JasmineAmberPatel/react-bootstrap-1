@@ -1,6 +1,7 @@
 .AddProperty {
     padding: 20px;
     align-items: vertical;
+    display: flex;
 }
 
 label {
@@ -34,4 +35,10 @@ button {
   font-family: 'Lexend Deca', sans-serif;
   border: 2px solid #764971;
 }
+
+.row {
+    display: flex;
+    line-height: 40px;
+}
+
 
