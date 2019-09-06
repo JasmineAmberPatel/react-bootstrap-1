@@ -94,7 +94,7 @@ class AddProperty extends Component {
           <div><label> Email: <input name="email" value={this.state.fields.email} onChange={this.handleFieldChange} /></label></div>
           <div><label> Submit Info: <button type="submit"> Add </button></label></div>
           <div className="success">{this.state.isSuccess && <Alert message={this.state.alertMessage} success />}</div>
-        <div className="error">{this.state.isError && <Alert message={this.state.alertMessage} />}</div>
+          <div className="error">{this.state.isError && <Alert message={this.state.alertMessage} />}</div>
         </form>
       </div>
     );
