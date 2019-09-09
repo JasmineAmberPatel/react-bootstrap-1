@@ -1,20 +1,17 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../../Styles/PropertyCard.css';
 
-const PropertyCard = () => {
+const PropertyCard = props => {
   return (
-    <div className="PropertyCard"> {
-      <PropertyCard
-        key={PropertyCard.type}
-        title={PropertyCard.title}
-        type={PropertyCard.type}
-        bathrooms={PropertyCard.bathrooms}
-        bedrooms={PropertyCard.bedrooms}
-        price={PropertyCard.price}
-        city={PropertyCard.city}
-        email={PropertyCard.email}
-      />
-    }
+    <div className="propertyCard">
+      <div className="title">{props.title}</div>
+      <div className="type">{props.type}</div>
+      <div className="bathrooms">Bathrooms: {props.bathrooms}</div>
+      <div className="bedrooms">Bedrooms: {props.bedrooms}</div>
+      <div className="price">${props.price}</div>
+      <div className="city"> {props.city}</div>
+      <div className="email">Contact: {props.email}</div>
     </div>
   );
 };
