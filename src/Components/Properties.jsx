@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropertyCard from '../Components/PropertyCard';
+import '../../Styles/PropertyCard.css';
 import axios from 'axios';
 
 class Properties extends Component {
