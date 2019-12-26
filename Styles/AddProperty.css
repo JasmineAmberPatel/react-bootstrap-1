@@ -5,24 +5,21 @@
     font-family: 'Lexend Deca', sans-serif;
     font-size: 1rem;
     box-sizing: border-box;
-    width: 40em;
-    justify-content: center;
-}
-
-label {
-    display: inline-block;
+    width: 100%;
+    justify-content: space-around;
+    background-color: white;
 }
 
 input {
     margin: 1em;
     border: 2px solid #764971;
-    width: 50em;
+    width: 100%;
 }
 
 select {
     border: 2px solid #764971;
     margin: 1em;
-    width: 50em;
+    width: 100%;
 }
 
 button {
@@ -34,5 +31,8 @@ button {
   width: 5rem;
 }
 
+form {
+    background-color: white;
+}
 
 
