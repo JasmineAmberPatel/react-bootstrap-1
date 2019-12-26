@@ -26,8 +26,8 @@ class Properties extends Component {
     return (
       <div>
         {this.state.error && <Alert message={this.state.alertMessage} />}
-        <h4>Property List</h4>
-        <div>
+        <h1>Property List</h1>
+        <div className="Card">
           {this.state.properties.map(property => (
             <div key={property._id} className="col">
               <PropertyCard {...property} />
