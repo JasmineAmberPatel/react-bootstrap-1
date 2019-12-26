@@ -1,22 +1,19 @@
 import React from 'react';
 import NavBar from './NavBar';
 import '../../Styles/app.css';
-import { Switch, Route } from 'react-router';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Properties from './Properties';
 import AddProperty from './AddProperty';
-import { BrowserRouter } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <NavBar />
-        <Switch>
-          <Route exact path="/" component={Properties} />
-          <Route exact path="/add-property" component={AddProperty} />
-        </Switch>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <NavBar />
+      <Switch>
+        <Route exact path="/" component={Properties} />
+        <Route exact path="/add-property" component={AddProperty} />
+      </Switch>
+    </BrowserRouter>
   );
 };
 

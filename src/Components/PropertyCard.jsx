@@ -1,5 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../../Styles/PropertyCard.css';
 
 const PropertyCard = props => {
@@ -10,7 +9,7 @@ const PropertyCard = props => {
       <div className="bathrooms">Bathrooms: {props.bathrooms}</div>
       <div className="bedrooms">Bedrooms: {props.bedrooms}</div>
       <div className="price">${props.price}</div>
-      <div className="city"> {props.city}</div>
+      <div className="city">{props.city}</div>
       <div className="email">Contact: {props.email}</div>
     </div>
   );

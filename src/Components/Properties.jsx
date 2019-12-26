@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropertyCard from '../Components/PropertyCard';
 import '../../Styles/PropertyCard.css';
 import axios from 'axios';
+import Alert from './Alert';
 
 class Properties extends Component {
   state = {
@@ -15,11 +16,11 @@ class Properties extends Component {
       .then(({ data: properties }) => this.setState({ properties }))
       .catch(error => {
         this.setState({
-          isError: true,
-        })
+          error: true,
+        });
         console.log(error);
-      }
-      )};
+      });
+  };
 
   render() {
     return (
